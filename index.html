@@ -1,0 +1,201 @@
+<!DOCTYPE HTML>
+<html>
+
+	<head>
+		<title>iMac G4</title>
+		<link rel="stylesheet/less" href="resources/css/style.less">
+		<script src="resources/js/lib/less.js"></script>
+		<script src="resources/js/lib/jquery.js"></script>
+		<script src="resources/js/lib/jquery-ui.min.js"></script>
+		<script src="resources/js/desktop.js"></script>
+		<link rel="shortcut icon" type="image/png" href="resources/images/favicon.png">
+	</head>
+	<body class="device-showing">
+		<div id="boot-prompt">Click anywhere to boot...</div>
+		
+		<audio id="boot-sound" src="resources/sounds/boot.wav" autostart="false"></audio>
+		
+		<div id="curtain"></div>
+		
+		<div id="screen" class="in-device">
+			<div id="off"></div>
+				
+			<div id="startup">
+				<div class="apple-logo"></div>
+				<div id="spinner"></div>
+			</div>
+			
+			<div id="loading">
+				<div id="loading-window">
+					<div id="mac-os-x-loading"></div>
+					<div class="progress-bar">
+						<div class="progress-bar-fill">
+						    <div class="progress-bar-fill-bg"></div>
+						</div>
+					</div>
+					<div id="loading-message">Taking picture for desktop...</div>
+				</div>
+			</div>
+			
+			<div id="ready">
+				<div id="menu-bar">
+					<div class="apple-logo"></div>
+					<div id="left-contents">
+						<div class="app-name">Finder</div>
+						<div class="app-menu-item-set" data-app-id="finder">
+							<div class="app-menu-item">File</div>
+							<div class="app-menu-item">Edit</div>
+							<div class="app-menu-item">View</div>
+							<div class="app-menu-item">Go</div>
+							<div class="app-menu-item">Window</div>
+							<div class="app-menu-item">Help</div>
+						</div>
+						<div class="app-menu-item-set" data-app-id="quicktime">
+							<div class="app-menu-item">File</div>
+							<div class="app-menu-item">Edit</div>
+							<div class="app-menu-item">View</div>
+							<div class="app-menu-item">Window</div>
+							<div class="app-menu-item">Help</div>
+						</div>
+						<div class="app-menu-item-set" data-app-id="system-preferences">
+							<div class="app-menu-item">Edit</div>
+							<div class="app-menu-item">View</div>
+							<div class="app-menu-item">Window</div>
+							<div class="app-menu-item">Help</div>
+						</div>
+					</div>
+				
+					<div id="right-contents">
+						<div id="menu-bar-icon-dropdown-pair" class="menu-bar-item">
+							<div class="menu-bar-icon-wrapper toggle-dropdown" id="menu-bar-icon-volume">
+								<div class="menu-bar-icon"></div>
+							</div>
+							<div class="dropdown">
+								<input type="range" min="10" max="100" class="slider volume">
+							</div>
+						</div>
+						<div id="clock" class="menu-bar-item"></div>
+					</div>
+					<div id="right-corner"></div>
+				</div>
+			
+				<div id="desktop">
+					<div class="window brushed" id="streak-notification">
+						<label>You're on a streak!!!</label>
+						<div id="rainbow"></div>
+					</div>
+					
+					<div class="window aqua" id="finder" data-app-name-id="finder" data-app-name-display="Finder">
+						<div class="title-bar">
+							<div class="window-controls aqua"></div>
+						</div>
+						<div id="mac-os-x-welcome"></div>
+						<h3 id="version-number">Version 10.2</h3>
+						<h2>This is a tribute to the iMac G4.<br>Built by <a href="http://leo.gd" target="_blank">Leo Mancini</a>.<br>Code available on <a href="https://github.com/leomancini31/imac-g4" target="_blank">GitHub</a>.</h2>
+						<div class="button blue" style="margin: 20px auto;" id="toggle-device"><label>OK</label></div>
+						<h3>Original Design &trade; & &copy; Apple Computer, Inc. 1983 - 2002</h3>
+						<div class="background"></div>
+					</div>
+
+					<div class="window brushed" id="quicktime" data-app-name-id="quicktime" data-app-name-display="QuickTime Player">
+						<div class="window-controls brushed"></div>
+					</div>
+
+					<div class="window aqua" id="system-preferences" data-app-name-id="system-preferences" data-app-name-display="System Preferences">
+						<div class="title-bar">
+							<div class="window-controls aqua"></div>
+						</div>
+						<div id="icon-bar"></div>
+						<div id="content">
+							<div class="content-section" style="width: 130px;">
+								<label><b>Volume</b></label>
+								<br>
+								<br>
+								<input type="range" min="10" max="100" class="slider volume">
+							</div>
+							<div class="content-section">
+								<label><b>Device View</b></label>
+								<br>
+								<br>
+								<div class="button" id="toggle-device"><label>Toggle</label></div>
+							</div>
+						</div>
+						<div class="background"></div>
+					</div>
+					
+					<div id="dock-wrapper">
+						<div id="dock-icons">
+							<div class="dock-icon app open" data-app-id="finder">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/18.png');"></div>
+								<label>Finder</label>
+							</div>
+							<div class="dock-icon app" data-app-id="mail">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/12.png');"></div>
+								<label>Mail</label>
+							</div>
+							<div class="dock-icon app" data-app-id="ichat">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/23.png');"></div>
+								<label>iChat</label>
+							</div>
+							<div class="dock-icon app" data-app-id="address-book">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/13.png');"></div>
+								<label>Address Book</label>
+							</div>
+							<div class="dock-icon app" data-app-id="internet-explorer">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/28.png');"></div>
+								<label>Internet Explorer</label>
+							</div>
+							<div class="dock-icon app" data-app-id="itunes">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/51.png');"></div>
+								<label>iTunes</label>
+							</div>
+							<div class="dock-icon app" data-app-id="iphoto">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/64.png');"></div>
+								<label>iPhoto</label>
+							</div>
+							<div class="dock-icon app" data-app-id="imovie">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/25.png');"></div>
+								<label>iMovie</label>
+							</div>
+							<div class="dock-icon app" data-app-id="sherlock">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/3.png');"></div>
+								<label>Sherlock</label>
+							</div>
+							<div class="dock-icon app openable" data-app-id="quicktime">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/36.png');"></div>
+								<label>QuickTime</label>
+							</div>
+							<div class="dock-icon app openable" data-app-id="system-preferences">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/24.png');"></div>
+								<label>System Preferences</label>
+							</div>
+							<div id="dock-divider"></div>
+							<div class="dock-icon">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/14.png');"></div>
+								<label>iMacG4.com</label></div>
+							<div class="dock-icon">
+								<div class="dock-icon-image" style="background-image: url('resources/images/icons/67.png');"></div>
+								<label>Trash</label>
+							</div>
+							<div id="dock-background"></div>
+						</div>
+					</div>
+					
+					<div id="paused-curtain"></div>
+					
+					<div id="icons"></div>
+				</div>
+
+				<div class="desktop-picture" id="itunes-visualizer">
+					<video loop preload="auto">
+					  <source src="resources/images/itunes-visualizer.mp4?1539556013313" type="video/mp4">
+					</video>
+				</div>
+				<div class="desktop-picture" id="default"></div>
+			</div>
+		</div>
+		
+		<div id="device" class="showing" style="transform: scale(.89)"></div>
+
+	</body>
+</html>
