@@ -8,7 +8,7 @@
 		<script src="resources/js/lib/jquery.js"></script>
 		<script src="resources/js/lib/jquery-ui.min.js"></script>
 		<script src="resources/js/desktop.js"></script>
-		<link rel="shortcut icon" type="image/png" href="resources/images/favicon.png">
+		<link rel="shortcut icon" type="image/png" href="resources/images/favicon-2.png">
 	</head>
 	<body class="device-showing">
 		<div id="boot-prompt">Click anywhere to boot...</div>
