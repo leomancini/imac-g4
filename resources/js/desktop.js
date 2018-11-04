@@ -1,7 +1,7 @@
 // setup / booting / debug
 var base_image_url = "resources/images/";
 var title = $(document).attr("title");
-var skip_startup_process = true;
+var skip_startup_process = false;
 var booted = false;
 var boot_delays = {
 	turn_on_screen: 300,
