@@ -471,7 +471,7 @@ $(document).ready(function() {
 	if(keyboard.keyCode == q_key_code) {
 		toggle_in_device();
 	}
-}).on("click mousedown", function(event) {
+}).on("click mousedown touchstart", function(event) {
 	// if a click is not on this menu bar dropdown, hide the dropdown
 	if($(event.target).closest("#menu-bar-icon-dropdown-pair").length == 0) {
 		$(".menu-bar-icon-wrapper").removeClass("open").parent().removeClass("open");
