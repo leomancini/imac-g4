@@ -191,6 +191,17 @@
 		</div>
 		
 		<div id="device" class="showing" style="transform: scale(.89)"></div>
+		
+		<?php echo $_SERVER['SERVER_NAME']; ?>
+		
+		<!-- Global site tag (gtag.js) - Google Analytics -->
+		<script async src="https://www.googletagmanager.com/gtag/js?id=UA-112757234-3"></script>
+		<script>
+		  window.dataLayer = window.dataLayer || [];
+		  function gtag(){dataLayer.push(arguments);}
+		  gtag('js', new Date());
 
+		  gtag('config', 'UA-112757234-3');
+		</script>
 	</body>
 </html>
