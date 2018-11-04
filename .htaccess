@@ -1,4 +1,8 @@
 Options +FollowSymLinks
 RewriteEngine On
+
+#  Force HTTPS if not localhost or port 8888
+RewriteCond %{HTTP_HOST} !=localhost
+RewriteCond %{HTTP_HOST} !=leo.local
 RewriteCond %{HTTPS} !=on
 RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301] 
