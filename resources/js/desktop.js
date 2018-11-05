@@ -1,7 +1,7 @@
 // setup / booting / debug
 var base_image_url = "resources/images/";
 var title = $(document).attr("title");
-var skip_startup_process = false;
+var skip_startup_process = true;
 var booted = false;
 var boot_delays = {
 	turn_on_screen: 300,
@@ -292,6 +292,7 @@ $(document).ready(function() {
 		"button-blue-pulse-overlay.png",
 		"slider-handle.png",
 		"menu-bar-icon-volume.png",
+		"menu-bar-repeat.png",
 		"menu-bar-selected-repeat.png"
 	]);
 	
