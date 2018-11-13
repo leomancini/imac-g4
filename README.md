@@ -1,5 +1,5 @@
-# iMac G4
+#  iMac G4 Tribute Simulator
 
-Live: https://imacg4.com
+⚡️ Live at [imacg4.com](https://imacg4.com)
 
 ![screenshot](https://github.com/leomancini31/imac-g4/blob/master/readme/screenshot.gif)
