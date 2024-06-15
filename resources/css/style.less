@@ -204,7 +204,7 @@ html, body {
 						overflow: hidden;
 						transition: width 4.8s linear;
 					
-						@-webkit-keyframes progress-bar-continuous-animation {
+						@keyframes progress-bar-continuous-animation {
 							from { transform: translateX(0); }
 							to { transform: translateX(-50%); }
 						}
@@ -354,14 +354,14 @@ html, body {
 							display: none;
 						
 							input[type=range] {
-								-webkit-transform: rotate(-90deg);
+								transform: rotate(-90deg);
 								position: relative;
 								top: 64px;
 								left: -52px;
 							}
 
 							input[type=range]::-webkit-slider-thumb {
-								-webkit-transform: rotate(90deg);
+								transform: rotate(90deg);
 							}
 						}
 					}
@@ -377,6 +377,7 @@ html, body {
 			}
 			
 			input[type=range] {
+				appearance: none;
 				-webkit-appearance: none;
 				position: absolute;
 			}
@@ -629,7 +630,6 @@ html, body {
 							padding: 25px;
 							
 							.content-section {
-								display: inline-block;
 								vertical-align: top;
 								margin-right: 25px;
 								float: left;
@@ -807,9 +807,9 @@ html, body {
 									filter: brightness(50%);
 								}
 								
-								&.app.open:after {
-									// bottom: 7px;
-								}
+								// &.app.open:after {
+								// 	// bottom: 7px;
+								// }
 							}
 
 							.dock-icon-image {
@@ -834,7 +834,7 @@ html, body {
 							}
 							
 							&.opening {
-								-webkit-animation: bounce 0.5s infinite alternate;
+								animation: bounce 0.5s infinite alternate;
 								
 								label {
 									bottom: 115px;
